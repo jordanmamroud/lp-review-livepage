@@ -8,7 +8,7 @@ The checklist's contents and thresholds haven't been reviewed by Jordan yet (spe
 
 ## How it runs
 
-- **Input:** one live page URL and a job ID, on demand (see `src/run-instructions.md`).
+- **Input:** one live page URL and a job ID, on demand (see `src/scheduled-task.md`).
 - **Visits the page as real visitors do:**
   - small phone (iPhone SE size), regular iPhone, large Android phone, tablet, laptop and large desktop
   - Chrome, and Safari's engine (WebKit) as a stand-in for iPhone Safari, since most phone visitors use one of these. Real iPhone Safari is always listed under what couldn't be checked.
