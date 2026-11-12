@@ -1,6 +1,6 @@
 # 0004: Everything a run uses lives in the repo, as plain files
 
-**Status:** Accepted on 2026-11-12.
+**Status:** Accepted on 2026-11-12. One part is being re-tested: how a run gets these files (whether it copies the repo). See "Being tried" below.
 
 ## Context
 
@@ -25,3 +25,14 @@ Jordan decided:
 - Changing how reviews work means committing to the repo. The next run uses the latest version.
 - The saved prompt's exact wording should be recorded in the repo once the scheduled task exists (checkpoint 1, issue #2).
 - If the review ever needs to be run by name from other places, it could become a skill later.
+
+## Being tried (not decided)
+
+Jordan wants scheduled runs to load their instructions from GitHub without copying the whole repo. On 2026-11-12, a test tried a run with no repo attached. Its saved prompt pointed to one file in this repo, which the run read through the GitHub connector. Results: [issue #2 comment](https://github.com/jordanmamroud/lp-review-livepage/issues/2#issuecomment-6824961758). The `steps.md` named there is now `tests/connector-pattern/run-instructions.md`.
+
+- **Worked:** no repo copied, reading files through the GitHub connector, saving a text file to Drive, no approvals needed.
+- **Not tested yet:** passing the URL and job ID through the real API trigger, uploading images to Drive, and running browsers without a repo.
+
+If runs end up working this way, part of this ADR changes. A run wouldn't copy the repo, so it wouldn't read `CLAUDE.md` automatically. The saved prompt would point straight to `src/scheduled-task.md`, and the first line of `CLAUDE.md` would no longer be how a run finds its steps. That change goes in a new ADR that replaces this one.
+
+Either way, the rest stays: the files live in this repo, as plain files, in `src/`.
