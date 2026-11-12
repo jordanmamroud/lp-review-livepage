@@ -13,9 +13,7 @@ This checklist is the **minimum**, not the limit. The agent must also do a free 
   - phone held upright and sideways
   - arriving with ad tracking added to the link (for example `?gclid=...` or `?utm_source=...`), since that's how ad visitors arrive
 - **Never submits forms.** It tests them up to the submit button only.
-- **Output:**
-  - a short summary in chat
-  - a full HTML report file with every check, a screenshot of every problem and a plain-language fix
+- **Output:** a structured result for agents and a full HTML report for people, both described in `src/result-format.md`.
 
 ## How problems are ranked
 

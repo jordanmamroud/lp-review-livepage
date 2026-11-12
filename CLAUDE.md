@@ -14,3 +14,4 @@ The bar is simple: if a visitor would notice it, the agent should catch it first
 
 - `src/scheduled-task.md`: the steps a run follows.
 - `src/checklist.md`: everything a run checks.
+- `src/result-format.md`: what a run hands back, for agents and for people.

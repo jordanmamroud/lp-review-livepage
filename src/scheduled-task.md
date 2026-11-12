@@ -14,13 +14,13 @@ This is what a run follows. A run starts from an API call (or Run now) with one 
 3. Go through every section of the checklist, then do the fresh-eyes walk-through.
 4. Never submit a form.
 5. Rank every problem as Blocker, Major or Minor.
-6. Write the report: every check, a screenshot of every problem, a plain-language fix for each, what couldn't be checked, and the verdict (ready, ready with minor fixes, or not ready).
-7. Deliver the report. Where it goes isn't decided yet (see below).
+6. Write the result in the format in `src/result-format.md`: the structured result and the HTML report.
+7. Deliver the result. How it gets back to whoever asked isn't decided yet (see below).
 
 ## Still open
 
-- **Where the report goes.** Not decided. Options: email, a claude.ai page, saved in this repo, or sent back to a Make webhook.
+- **How the result gets back to the caller.** Being considered: a callback (the caller sends a web address with the page URL, and the run posts the result there when done), plus a saved copy in a fixed place as a backup. Not decided.
 - **Browser tools.** To try first: Playwright with Chromium and WebKit, installed by the cloud environment's setup script. Not tested yet.
 - **Speed scores.** To try first: Google's PageSpeed Insights API, or Lighthouse run in the session. Not tested yet.
-- **Real iPhone Safari** can't run in the cloud. WebKit is a stand-in, so the report must list this under what it couldn't check.
+- **Real iPhone Safari** can't run in the cloud. WebKit is a stand-in, so the result must list this under what it couldn't check.
 - **Internet access.** The cloud environment's network access must allow the landing page domains (for example landing.kitchenmagic.com). Not set up yet.
