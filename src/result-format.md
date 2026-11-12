@@ -5,7 +5,7 @@ What a run saves. It has two parts describing the same review:
 1. **Structured result (`result.json`):** for an agent that will act on it, for example to fix an issue.
 2. **Full HTML report (`report.html`):** for a person to read. It also lists every check that passed.
 
-Where they're saved is in `src/scheduled-task.md`. This format is a draft and may change as checkpoints are built (spec: issue #1).
+Where they're saved is in `src/run-instructions.md`. This format is a draft and may change as checkpoints are built (spec: issue #1).
 
 ## Structured result
 
