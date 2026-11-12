@@ -66,8 +66,8 @@ A failed run saves only what it can, for example:
 - **status:** `done` or `failed`. Always present, so a caller never waits on a run that crashed.
 - **failure_reason:** only when status is `failed`. What stopped the run, in plain words.
 - **page, reviewed_at:** what was reviewed and when (Central time). If the page changed since, the issues may be out of date.
-- **verdict:** `ready`, `ready with minor fixes` or `not ready`.
-- **could_not_check:** every blind spot. Never leave this out, even when it's empty.
+- **verdict:** `ready`, `ready with minor fixes` or `not ready`. Only in a `done` result.
+- **could_not_check:** every blind spot. Never leave this out of a `done` result, even when it's empty.
 - **report_html:** link to the full HTML report.
 - **id:** a short descriptive name in lowercase with dashes, saying what and where. Lets an agent say "fixed phone-number-mismatch-footer". Being tried: giving the same problem the same id on a re-run, so a re-run shows whether it's gone.
 - **level:** Blocker, Major or Minor (defined in `src/checklist.md`).
