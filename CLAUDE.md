@@ -14,7 +14,7 @@ The bar is simple: if a visitor would notice it, the agent should catch it first
 
 - The spec is GitHub issue #1. Work is broken into its sub-issues, one checkpoint at a time.
 - Big decisions that are hard to reverse are recorded as ADRs in `docs/adr/`. Follow them, or replace one with a new ADR if a decision changes.
-- Every commit mentions the issue it's for, for example "Refs #2" (or "Fixes #2" when it finishes the issue).
+- Every commit mentions the issue it's for with "Refs #N" (for example "Refs #2"). Don't use "Fixes #N", because that closes the issue on commit. An issue is closed only after a different agent acting as Jordan has checked it.
 
 ## Files
 

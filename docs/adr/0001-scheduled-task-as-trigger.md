@@ -1,6 +1,6 @@
 # 0001: Start reviews with a Claude scheduled task (API trigger)
 
-**Status:** Accepted on 2026-11-12, pending one unattended test run (see Consequences).
+**Status:** Accepted on 2026-11-12, pending one unattended test run (see Consequences, and issue #2).
 
 ## Context
 
@@ -8,16 +8,16 @@ Reviews are started by Jordan's own agents (his Claude chats, tasks and skills),
 
 Two ways to start a run were considered:
 
-- **Claude scheduled task with an API trigger.** Runs on Jordan's Claude plan. Has a daily run limit. Can save to Drive through his Google Drive connector. Network access is limited by default and must be opened for the landing page sites.
+- **Claude scheduled task with an API trigger.** Runs on Jordan's Claude plan. Has a daily run limit. It's a research preview, so its limits and API may change. Can save to Drive through his Google Drive connector. Network access is limited by default and must be opened for the landing page sites.
 - **GitHub Actions running Claude Code.** Real browsers and open internet. Each run is paid through an Anthropic API key. Saving to Drive would need its own Google login set up.
 
-A third option, Jordan's own server, was set aside as the most work.
+A third option, Jordan's own server, was not pursued. In the brainstorm, Claude described it as the most work.
 
 The facts about scheduled tasks come from research in the brainstorm chat (https://claude.ai/chat/eba197aa-ad79-46ba-aa11-e7159c87f954, Turns 4-6). They have not been tested in a real run yet.
 
 ## Decision
 
-Use a Claude scheduled task with an API trigger. Jordan decided this in https://claude.ai/code/session_01DTT9VFB7vFbN9G7guHKuUq, mainly because results go to Drive and the scheduled task can use his Drive connector.
+Use a Claude scheduled task with an API trigger. Jordan chose this in https://claude.ai/code/session_01DTT9VFB7vFbN9G7guHKuUq, picking Claude's recommendation. That recommendation was based on results going to Drive, which the scheduled task can reach through his Drive connector.
 
 ## Consequences
 
