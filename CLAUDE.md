@@ -12,12 +12,12 @@ The bar is simple: if a visitor would notice it, the agent should catch it first
 
 ## Scope
 
-This repo only reviews pages and saves the result. It does not fix pages. Fixing, and the fix → re-review loop, live elsewhere (for example Jordan's km-lp-edit-page skill), and those just call this review.
+This repo only reviews pages and saves the result. Fixing pages, and the fix → re-review loop, are out of scope. A fixer, such as Jordan's km-lp-edit-page skill, would call this review.
 
 ## Working on the project
 
 - The spec is GitHub issue #1. Work is broken into its sub-issues, one checkpoint at a time.
-- Decisions Jordan makes between real alternatives are recorded as ADRs in `docs/adr/`. Group closely related decisions into one ADR rather than writing one per small choice. Only record what Jordan actually decided; drafts and open questions stay in the spec and the files. Follow the ADRs, or replace one with a new ADR if a decision changes.
+- Jordan's decisions between real alternatives go in `docs/adr/`, with related decisions grouped into one ADR. Drafts and open questions stay in the spec and the files. Follow the ADRs; if a decision changes, replace it with a new ADR.
 - Every commit mentions the issue it's for with "Refs #N" (for example "Refs #2"). Don't use "Fixes #N", because that closes the issue on commit. An issue is closed only after a different agent acting as Jordan has checked it.
 
 ## Files
