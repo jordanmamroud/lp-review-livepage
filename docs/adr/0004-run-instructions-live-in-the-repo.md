@@ -1,6 +1,6 @@
 # 0004: Everything a run uses lives in the repo, as plain files
 
-**Status:** Accepted on 2026-11-12.
+**Status:** Accepted on 2026-11-12. The file name `src/scheduled-task.md` below was changed to `src/run-instructions.md` by ADR 0005; the rest stands.
 
 ## Context
 
