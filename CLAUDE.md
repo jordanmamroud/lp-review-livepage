@@ -1,3 +1,3 @@
 # lp-review-livepage instructions
 
-The goal is to have
+The goal is to have 
