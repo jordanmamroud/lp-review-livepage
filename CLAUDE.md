@@ -10,8 +10,15 @@ It only cares about what visitors actually see and experience, not the code behi
 
 The bar is simple: if a visitor would notice it, the agent should catch it first. A clean review should mean the page is ready. It shouldn't mean "probably fine."
 
+## Working on the project
+
+- The spec is GitHub issue #1. Work is broken into its sub-issues, one checkpoint at a time.
+- Big decisions that are hard to reverse are recorded as ADRs in `docs/adr/`. Follow them, or replace one with a new ADR if a decision changes.
+- Every commit mentions the issue it's for, for example "Refs #2" (or "Fixes #2" when it finishes the issue).
+
 ## Files
 
 - `src/scheduled-task.md`: the steps a run follows.
 - `src/checklist.md`: everything a run checks.
-- `src/result-format.md`: what a run hands back, for agents and for people.
+- `src/result-format.md`: what a run saves, for agents and for people.
+- `docs/adr/`: decisions and why they were made.

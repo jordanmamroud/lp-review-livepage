@@ -1,11 +1,11 @@
 # Result format
 
-What a run saves. It has two parts with the same content:
+What a run saves. It has two parts describing the same review:
 
 1. **Structured result (`result.json`):** for an agent that will act on it, for example to fix an issue.
-2. **Full HTML report (`report.html`):** for a person to read.
+2. **Full HTML report (`report.html`):** for a person to read. It also lists every check that passed.
 
-Where they're saved is in `src/scheduled-task.md`.
+Where they're saved is in `src/scheduled-task.md`. This format is a draft and may change as checkpoints are built (spec: issue #1).
 
 ## Structured result
 
@@ -13,9 +13,10 @@ A real-shaped example (the numbers and links are made up):
 
 ```json
 {
-  "job_id": "2026-11-12-0745_jm-refacing-ppc",
+  "job_id": "2026-11-12-0207_jm-refacing-ppc",
+  "status": "done",
   "page": "https://landing.kitchenmagic.com/jm-refacing-ppc",
-  "reviewed_at": "2026-11-12T07:45:00-06:00",
+  "reviewed_at": "2026-11-12T02:07:00-06:00",
   "verdict": "not ready",
   "could_not_check": [
     "Thank-you page after the form is submitted (forms are never submitted)",
@@ -29,7 +30,7 @@ A real-shaped example (the numbers and links are made up):
       "problem": "Footer phone number differs from the header and call button",
       "where": {
         "page": "https://landing.kitchenmagic.com/jm-refacing-ppc?gclid=test",
-        "device": "iPhone 15, Safari, upright",
+        "device": "iPhone 15 size, WebKit (Safari stand-in), upright",
         "section": "Footer",
         "element": "footer a[href^='tel:']",
         "visible_text": "(610) 555-0193"
@@ -41,15 +42,29 @@ A real-shaped example (the numbers and links are made up):
       },
       "how_to_see_it": "Open the page on a phone, scroll to the footer",
       "suggested_fix": "Change the footer number to (610) 555-0139",
-      "how_to_confirm": "Re-run the consistency check: every phone number on the page matches"
+      "how_to_confirm": "Re-run the review: every phone number on the page matches"
     }
   ]
+}
+```
+
+A failed run saves only what it can, for example:
+
+```json
+{
+  "job_id": "2026-11-12-0207_jm-refacing-ppc",
+  "status": "failed",
+  "failure_reason": "The page didn't load: the network blocked landing.kitchenmagic.com",
+  "page": "https://landing.kitchenmagic.com/jm-refacing-ppc",
+  "reviewed_at": "2026-11-12T02:07:00-06:00"
 }
 ```
 
 ### What each field is for
 
 - **job_id:** the name of this review's folder in Google Drive.
+- **status:** `done` or `failed`. Always present, so a caller never waits on a run that crashed.
+- **failure_reason:** only when status is `failed`. What stopped the run, in plain words.
 - **page, reviewed_at:** what was reviewed and when (Central time). If the page changed since, the issues may be out of date.
 - **verdict:** `ready`, `ready with minor fixes` or `not ready`.
 - **could_not_check:** every blind spot. Never leave this out, even when it's empty.
@@ -64,7 +79,7 @@ A real-shaped example (the numbers and links are made up):
 
 ## HTML report
 
-The same content, for a person:
+The same review, for a person:
 
 1. Verdict at the top.
 2. What couldn't be checked.

@@ -4,12 +4,14 @@ The goal (from `CLAUDE.md`): if a visitor would notice it, the agent catches it 
 
 This checklist is the **minimum**, not the limit. The agent must also do a free "fresh eyes" walk-through as a real visitor and report anything else that feels off, even if no check below covers it.
 
+The checklist's contents and thresholds haven't been reviewed by Jordan yet (spec: issue #1).
+
 ## How it runs
 
-- **Input:** one live page URL, on demand.
+- **Input:** one live page URL and a job ID, on demand (see `src/scheduled-task.md`).
 - **Visits the page as real visitors do:**
   - small phone (iPhone SE size), regular iPhone, large Android phone, tablet, laptop and large desktop
-  - Safari (iPhone) and Chrome, since most phone visitors use one of these
+  - Chrome, and Safari's engine (WebKit) as a stand-in for iPhone Safari, since most phone visitors use one of these. Real iPhone Safari is always listed under what couldn't be checked.
   - phone held upright and sideways
   - arriving with ad tracking added to the link (for example `?gclid=...` or `?utm_source=...`), since that's how ad visitors arrive
 - **Never submits forms.** It tests them up to the submit button only.
@@ -42,14 +44,13 @@ This checklist is the **minimum**, not the limit. The agent must also do a free 
 
 ### 2. Speed: does it load fast?
 
-Google's "good" thresholds unless noted.
+Google's "good" thresholds unless noted. Tap speed (INP) is not checked: it can't be measured reliably in a single cloud run.
 
 | Check | Pass | Warning | Fail |
 |---|---|---|---|
 | Speed score (mobile and desktop) | 90+ | 50–89 | under 50 |
 | Main content appears (LCP) | 2.5s or less | 2.5–4s | over 4s |
 | Layout jumping while loading (CLS) | 0.1 or less | 0.1–0.25 | over 0.25 |
-| Response to a tap (INP) | 200ms or less | 200–500ms | over 500ms |
 | Total page size* | under 2 MB | 2–4 MB | over 4 MB |
 | Largest single image* | under 200 KB | 200 KB–1 MB | over 1 MB |
 | Usable on a slow phone connection* | within 5s | 5–10s | over 10s |
