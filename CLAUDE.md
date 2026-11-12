@@ -20,7 +20,7 @@ Work goes one task at a time (Matt Pocock's approach). Each task is done by an a
 
 1. **Catch up.** Read MEMORY.md, the top entry of `progress.md`, `git log --oneline -10`, and the open issues. The spec is issue #1. Checkpoints are its sub-issues.
 2. **Pick one task.** Take the next step on the earliest open checkpoint that isn't blocked. Do only that task.
-3. **Finish it.** Add a dated entry at the top of `progress.md` with what was done, what's next and what was learned. Then make **one commit for the whole task**, never one per file, and push. The commit mentions its issue with "Refs #N" (for example "Refs #2"). Don't use "Fixes #N", because that closes the issue on commit.
+3. **Finish it.** Add a dated entry at the top of `progress.md` with what was done, what's next and what was learned. Results and findings go there too, not in issue comments. Then make **one commit for the whole task**, never one per file, and push it to `main`. The commit mentions its issue with "Refs #N" (for example "Refs #2"). Don't use "Fixes #N", because that closes the issue on commit.
 4. **Closing.** An issue is closed only after a different agent acting as Jordan has checked it.
 
 Decisions: Jordan's decisions between real alternatives go in `docs/adr/`, with related decisions grouped into one ADR. Drafts and open questions stay in the spec and the files. Follow the ADRs; if a decision changes, replace it with a new ADR.
