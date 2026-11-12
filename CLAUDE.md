@@ -10,10 +10,14 @@ It only cares about what visitors actually see and experience, not the code behi
 
 The bar is simple: if a visitor would notice it, the agent should catch it first. A clean review should mean the page is ready. It shouldn't mean "probably fine."
 
+## Scope
+
+This repo only reviews pages and saves the result. It does not fix pages. Fixing, and the fix → re-review loop, live elsewhere (for example Jordan's km-lp-edit-page skill), and those just call this review.
+
 ## Working on the project
 
 - The spec is GitHub issue #1. Work is broken into its sub-issues, one checkpoint at a time.
-- Big decisions that are hard to reverse are recorded as ADRs in `docs/adr/`. Follow them, or replace one with a new ADR if a decision changes.
+- Decisions Jordan makes between real alternatives are recorded as ADRs in `docs/adr/`. Group closely related decisions into one ADR rather than writing one per small choice. Only record what Jordan actually decided; drafts and open questions stay in the spec and the files. Follow the ADRs, or replace one with a new ADR if a decision changes.
 - Every commit mentions the issue it's for with "Refs #N" (for example "Refs #2"). Don't use "Fixes #N", because that closes the issue on commit. An issue is closed only after a different agent acting as Jordan has checked it.
 
 ## Files
