@@ -111,19 +111,18 @@ On every device, browser and orientation listed above:
 - Buttons react visibly when tapped.
 
 **Phone and email**
-- Tapping the phone number dials the right number.
+- Tapping a phone number dials the same number it shows.
+- There are no hidden or empty phone links.
 - Email links open an email with the right address.
 
-**Form (tested without submitting)**
+**Form (used like a visitor, never submitted)**
 - The form is easy to find, and the call-to-action buttons lead to it.
-- Every field can be tapped and typed in on a phone.
-- The right keyboard appears for each field (number pad for phone, email keyboard for email).
-- Labels stay visible while typing, rather than disappearing placeholder text.
-- Phone autofill works on name, email, phone and address.
-- Required fields are marked, and dropdowns show the right options.
-- Error messages are clear and appear next to the right field.
-- Consent and privacy text is present and readable.
-- The form isn't longer than it needs to be.
+- The agent uses the form like a visitor would, pressing the buttons and typing in the fields through every step, to confirm it isn't broken.
+- It stops before the submit button.
+
+**Town text (Kitchen Magic pages)**
+- With a town code in the link (for example `?loc_id=1014679`, which is Bridgeport), the visitor's town shows.
+- With no town code, the "Near You" wording shows.
 
 **Everything else**
 - Videos play, don't autoplay with sound, and have a visible play button.
