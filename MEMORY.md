@@ -8,7 +8,7 @@ Why: Nov 12, 2026. Jordan couldn't tell what `steps.md` was for. (Jordan, in cha
 **Change only what Jordan asked for.** When he asks to rename one file, don't rename others, move folders or update related files beyond fixing references to that file. Suggest further changes instead.
 Why: Nov 12, 2026. Asked to rename the test's `steps.md`, Claude also renamed `src/scheduled-task.md`, the test folder and `extra.md`, and had to undo it. (Jordan, in chat)
 
-**Checks stay general. Don't add a list of facts for each page (like each page's phone number), and don't hard-code a rule that came from one page's bug (like "body text is 18px").** A check that's specific to how Kitchen Magic pages work, like the town text, is fine.
+**Keep checks general, not tied to issues already found. Don't hard-code a specific rule like "body text is 18px". For now, no list of each page's phone number (Jordan: "maybe later").** A check that's specific to how Kitchen Magic pages work, like the town text, is fine.
 Why: Nov 13, 2026. A draft of the checks was built from the old km-landing-pages rules file, and Jordan said those rules were too specific to issues already found. He doesn't want to keep a list of each page's phone number for now. (Jordan, in chat)
 
 **The form check is simple: use the form like a visitor would, pressing the buttons and typing through every step, to confirm it isn't broken, and never submit.** Don't add detailed cases like a zip code outside the service area.

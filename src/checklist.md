@@ -117,7 +117,7 @@ On every device, browser and orientation listed above:
 
 **Form (used like a visitor, never submitted)**
 - The form is easy to find, and the call-to-action buttons lead to it.
-- The agent uses the form like a visitor would, pressing the buttons and typing in the fields through every step, to confirm it isn't broken.
+- The form is used like a visitor would, pressing the buttons and typing in the fields through every step, to confirm it isn't broken.
 - It stops before the submit button.
 
 **Town text (Kitchen Magic pages)**
