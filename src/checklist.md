@@ -17,6 +17,19 @@ The checklist's contents and thresholds haven't been reviewed by Jordan yet (spe
 - **Never submits forms.** It tests them up to the submit button only.
 - **Output:** a structured result for agents and a full HTML report for people, both described in `src/result-format.md`.
 
+## What counts as a problem
+
+The agent finds faults. It doesn't give advice.
+
+- **Report it** if a visitor would be stopped, confused or put off by the page as it is.
+- **Leave it out** if the sentence would start with "it would be better if".
+
+Major design faults count. Small suggestions don't. For example:
+
+- Report: a popup covers the main button. Leave out: the popup's headline could be friendlier.
+- Report: text overlaps a photo on a phone. Leave out: more space between sections would look cleaner.
+- Report: a paragraph is too small to read. Leave out: a different font would look more modern.
+
 ## How problems are ranked
 
 | Level | Meaning | Example |
