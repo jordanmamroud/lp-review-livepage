@@ -2,7 +2,7 @@
 
 The goal (from `CLAUDE.md`): if a visitor would notice it, the agent catches it first. A clean review means the page is ready.
 
-This checklist is the **minimum**, not the limit. The agent must also do a free "fresh eyes" walk-through as a real visitor and report anything else that feels off, even if no check below covers it.
+This checklist is the **minimum**, not the limit. The agent must also do a free "fresh eyes" walk-through as a real visitor and report any other fault it finds, even if no check below covers it.
 
 The checklist's contents and thresholds haven't been reviewed by Jordan yet (spec: issue #1).
 
@@ -36,7 +36,7 @@ Major design faults count. Small suggestions don't. For example:
 |---|---|---|
 | **Blocker** | A visitor can't do what the page is for | Call button dials the wrong number, form field can't be typed in |
 | **Major** | Hurts trust or makes visitors leave | Typo in the headline, offer expired, page takes 8 seconds |
-| **Minor** | Polish a careful visitor would notice | Uneven spacing, one button styled differently |
+| **Minor** | A small fault a careful visitor would notice | Typo in the small print, out-of-date copyright year |
 
 ## What the report must also say
 
@@ -80,19 +80,18 @@ Also checks:
 - On a phone, the headline, the main message and the call-to-action button are visible right away.
 - It's clear within about 5 seconds what's offered and what to do next.
 - Nothing blocks the page right away, such as a popup or a cookie banner covering the button.
-- The main image is relevant and loads sharp.
+- The main image loads and is sharp.
 
 ### 4. Layout: does it look right everywhere?
 
 On every device, browser and orientation listed above:
 - No sideways scrolling, overlapping elements, cut-off text or broken images.
 - Faces and key details in photos aren't cropped off.
-- Sticky headers aren't too tall, and sticky bars or chat bubbles don't cover buttons, fields or text.
-- Spacing, fonts and colors are consistent from section to section.
+- Sticky headers, sticky bars and chat bubbles don't cover buttons, fields or text.
+- No spacing, font or color is clearly a mistake, such as one section in a different font.
 - No empty sections, repeated sections or leftover blank space.
 - Images are sharp, not blurry, stretched or squashed.
-- Single words aren't stranded alone on the last line of a headline.
-- The page still looks right when the phone uses dark mode.
+- The page is still readable when the phone uses dark mode.
 - Animations are smooth, and the page doesn't hijack scrolling.
 
 ### 5. Copy: is the writing correct?
@@ -103,16 +102,14 @@ On every device, browser and orientation listed above:
 - No expired offers, dates in the past, or an out-of-date copyright year.
 - Urgency claims like "today only" or "ends Friday" are actually true.
 - Offers have the required fine print, and the fine print matches the offer.
-- It's easy to read: short paragraphs and no jargon.
 
 ### 6. Consistency: does the page agree with itself?
 
 - The phone number, business name, offer, prices, percentages and dates are the same everywhere they appear.
 - Phone numbers and prices are written the same way each time.
 - The browser tab title and the share preview match the page's offer.
-- Buttons use matching wording and style.
-- Headings follow the same capitalization rules.
-- The tone stays the same, and no claims contradict each other.
+- No button looks like a mistake next to the others, such as one in a different color.
+- No claims contradict each other.
 
 ### 7. Function: does everything work?
 
@@ -145,7 +142,7 @@ On every device, browser and orientation listed above:
 
 ### 8. Trust: would a stranger trust this page?
 
-- Reviews or testimonials look real and current.
+- Reviews or testimonials aren't broken, empty or clearly out of date.
 - There's a real address or contact information.
 - There's a working privacy policy link.
 - Links to social profiles work, if present.
@@ -172,7 +169,7 @@ Also checks:
 The agent scrolls the whole page on a phone as a first-time visitor and answers:
 - Was anything confusing, annoying or suspicious?
 - Was there a moment I'd have left the page? Where and why?
-- Did anything look broken, cheap or unfinished?
+- Did anything look broken or unfinished?
 - Is it obvious what to do next at every point?
 
-Anything found here gets reported, even if it isn't on the checklist.
+Any fault found here gets reported, even if it isn't on the checklist. Ideas for making the page better are left out (see "What counts as a problem").
