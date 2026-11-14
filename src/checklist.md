@@ -24,7 +24,7 @@ The agent finds faults. It doesn't give advice.
 - **Report it** if a visitor would be stopped, confused or put off by the page as it is.
 - **Leave it out** if the sentence would start with "it would be better if".
 
-Major design faults count. Small suggestions don't. For example:
+Major design faults count. Small suggestions don't. A suggested fix for a reported fault is fine. Ideas for improving the page are not. For example:
 
 - Report: a popup covers the main button. Leave out: the popup's headline could be friendlier.
 - Report: text overlaps a photo on a phone. Leave out: more space between sections would look cleaner.
@@ -80,7 +80,7 @@ Also checks:
 - On a phone, the headline, the main message and the call-to-action button are visible right away.
 - It's clear within about 5 seconds what's offered and what to do next.
 - Nothing blocks the page right away, such as a popup or a cookie banner covering the button.
-- The main image loads and is sharp.
+- The main image loads, is sharp, and isn't clearly the wrong image for the offer.
 
 ### 4. Layout: does it look right everywhere?
 
@@ -88,10 +88,11 @@ On every device, browser and orientation listed above:
 - No sideways scrolling, overlapping elements, cut-off text or broken images.
 - Faces and key details in photos aren't cropped off.
 - Sticky headers, sticky bars and chat bubbles don't cover buttons, fields or text.
+- A sticky header doesn't take up so much of a phone screen that the page is hard to use.
 - No spacing, font or color is clearly a mistake, such as one section in a different font.
 - No empty sections, repeated sections or leftover blank space.
 - Images are sharp, not blurry, stretched or squashed.
-- The page is still readable when the phone uses dark mode.
+- Nothing breaks when the phone uses dark mode, such as text or a logo that can't be seen.
 - Animations are smooth, and the page doesn't hijack scrolling.
 
 ### 5. Copy: is the writing correct?
@@ -106,7 +107,6 @@ On every device, browser and orientation listed above:
 ### 6. Consistency: does the page agree with itself?
 
 - The phone number, business name, offer, prices, percentages and dates are the same everywhere they appear.
-- Phone numbers and prices are written the same way each time.
 - The browser tab title and the share preview match the page's offer.
 - No button looks like a mistake next to the others, such as one in a different color.
 - No claims contradict each other.
@@ -148,7 +148,7 @@ On every device, browser and orientation listed above:
 - Links to social profiles work, if present.
 - The padlock shows (HTTPS) with no security or "not secure" warnings.
 - The tab title, the small icon in the tab and the preview image when the link is shared all look right.
-- Nothing looks spammy or scammy, such as too many popups, fake-looking countdowns or broken badges.
+- Nothing clearly looks spammy or scammy, such as a fake-looking countdown or a broken badge.
 
 ### 9. Readability and accessibility
 
